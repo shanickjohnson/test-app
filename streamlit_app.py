@@ -14,20 +14,20 @@ st.sidebar.info(
 
 # --- Background Setter Function ---
 # This function sets the background color of the app
-def set_background(color):
-    # Create CSS to set the background color
-    css = f'''
-    <style>
-    [data-testid="stAppViewContainer"] > .main {{
-        background-color: {color};
-    }}
-    </style>
-    '''
-    # Apply the CSS to the app
-    st.markdown(css, unsafe_allow_html=True)
+def set_bg_color():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-color: #cfe2f3;
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
 
-# Call the function to set the background with a hardcoded color
-set_background("#f0f2f6")
+# Call the function to apply the background color
+set_bg_color()
 
 # --- Gemini API Configuration ---
 # Configure the Gemini API with the secret key
